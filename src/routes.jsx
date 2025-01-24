@@ -15,6 +15,7 @@ const FundoColorido = styled.div`
   );
   width: 100%;
   min-height: 100vh;
+  position: relative;
 `;
 
 const AppContainer = styled.div`
