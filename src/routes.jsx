@@ -32,8 +32,8 @@ const AppRoutes = () => {
           <Routes>
             <Route path="/" element={<Inicio />} />
           </Routes>
-          <Footer />
         </AppContainer>
+        <Footer />
       </FundoColorido>
     </BrowserRouter>
   );

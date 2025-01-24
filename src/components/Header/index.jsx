@@ -8,9 +8,8 @@ const HeaderEstilizado = styled.header`
   height: 65px;
   background: linear-gradient(
     146deg,
-    rgba(1, 3, 64, 0.5) 0%,
-    /* Menos opaco, mais transparente */ rgba(20, 1, 87, 0.5) 100%
-      /* Menos opaco, mais transparente */
+    rgba(0, 0, 30, 0.4) 0%,
+    rgba(5, 0, 60, 0.4) 100%
   );
 `;
 
@@ -31,7 +30,7 @@ const HeaderLinks = styled.div`
 const TituloEstilizado = styled.p`
   color: #ffffff;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
 `;
 
 const LinksEsilizados = styled(Link)`
