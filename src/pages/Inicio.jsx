@@ -17,8 +17,7 @@ const Inicio = () => {
           mim.
         </p>
       </MainTextoContainer>
-
-      <MainFoto></MainFoto>
+      <img src="" alt="" />{" "}
     </Main>
   );
 };
