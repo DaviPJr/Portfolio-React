@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Inicio from "./pages/Inicio";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import ParticlesComponent from "./components/Particles";
 
 const FundoColorido = styled.div`
   background: rgb(1, 3, 64);
@@ -22,12 +23,15 @@ const AppContainer = styled.div`
   width: 1440px;
   margin: 0 auto;
   max-width: 100%;
+  position: relative;
+  z-index: 1;
 `;
 
 const AppRoutes = () => {
   return (
     <BrowserRouter>
       <FundoColorido>
+        <ParticlesComponent />
         <Header />
         <AppContainer>
           <Routes>
