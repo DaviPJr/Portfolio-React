@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import styled from "styled-components";
 
+import SobreMim from "./pages/SobreMim";
 import Inicio from "./pages/Inicio";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -36,6 +37,7 @@ const AppRoutes = () => {
         <AppContainer>
           <Routes>
             <Route path="/" element={<Inicio />} />
+            <Route path="/sobre-mim" element={<SobreMim />} />
           </Routes>
         </AppContainer>
         <Footer />
