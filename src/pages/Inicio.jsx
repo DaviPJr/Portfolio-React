@@ -26,6 +26,7 @@ const FotoContainer = styled.div`
   align-items: center;
   border: 5px solid #60a5fa;
   box-shadow: 0px 4px 20px rgba(96, 165, 250, 0.5);
+  margin-right: 100px;
 `;
 
 const TituloEstilizado = styled.h1`

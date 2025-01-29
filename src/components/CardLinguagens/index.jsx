@@ -29,7 +29,7 @@ const CardTituloContainer = styled.div`
   justify-content: flex-start;
   gap: 30px;
   padding: 0px 20px;
-  padding-top: 10px;
+  padding-top: 20px;
 `;
 
 const CardTitulo = styled.p`
