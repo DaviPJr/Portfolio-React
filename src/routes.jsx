@@ -6,6 +6,7 @@ import Inicio from "./pages/Inicio";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
 import ParticlesComponent from "./components/Particles";
+import Linguagens from "./pages/Linguagens";
 
 const FundoColorido = styled.div`
   background: rgb(1, 3, 64);
@@ -38,6 +39,7 @@ const AppRoutes = () => {
           <Routes>
             <Route path="/" element={<Inicio />} />
             <Route path="/sobre-mim" element={<SobreMim />} />
+            <Route path="/linguagens" element={<Linguagens />} />
           </Routes>
         </AppContainer>
         <Footer />

@@ -51,7 +51,7 @@ const Header = () => {
         <HeaderLinks>
           <LinksEsilizados to="/">Inicio</LinksEsilizados>
           <LinksEsilizados to="/sobre-mim">Sobre mim</LinksEsilizados>
-          <LinksEsilizados>Linguagens</LinksEsilizados>
+          <LinksEsilizados to="/linguagens">Linguagens</LinksEsilizados>
           <LinksEsilizados>Projetos</LinksEsilizados>
           <LinksEsilizados>Certificados</LinksEsilizados>
           <LinksEsilizados>Contato</LinksEsilizados>

@@ -2,6 +2,8 @@ import styled from "styled-components";
 
 import foto from "../assets/ft2.jpeg";
 
+import Titulo from "../components/Titulo";
+
 const MainEstilizado = styled.main`
   display: flex;
   align-items: center;
@@ -15,10 +17,6 @@ const InfosContainer = styled.div`
   gap: 10px;
   flex-direction: column;
   width: 35%;
-`;
-
-const TituloEstilizado = styled.h1`
-  color: white;
 `;
 
 const ParagrafoEstilizado = styled.p`
@@ -38,7 +36,7 @@ const SobreMim = () => {
         <FotoEstilizada src={foto} alt="Foto de Davi Pereira" />
       </div>
       <InfosContainer>
-        <TituloEstilizado>Davi Pereira</TituloEstilizado>
+        <Titulo>Davi Pereira</Titulo>
         <ParagrafoEstilizado>
           Cursando Análise e Desenvolvimento de Sistemas.
         </ParagrafoEstilizado>
