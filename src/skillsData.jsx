@@ -1,29 +1,29 @@
-import { BiLogoJavascript } from "react-icons/bi";
-import { BiLogoReact } from "react-icons/bi";
-import { BiLogoTypescript } from "react-icons/bi";
-import node from "./assets/image.png";
-import { BiLogoPostgresql } from "react-icons/bi";
-import { BiLogoHtml5 } from "react-icons/bi";
-import { BiLogoTailwindCss } from "react-icons/bi";
-import { BiLogoFigma } from "react-icons/bi";
-import { SiGit } from "react-icons/si";
+import node from "./assets/node.png";
+import ts from "./assets/ts.png";
+import js from "./assets/js.png";
+import html from "./assets/html.png";
+import pg from "./assets/pg.png";
+import figma from "./assets/figma.png";
+import react from "./assets/react.png";
+import git from "./assets/git.png";
+import tailwind from "./assets/tailwind.png";
 
 const skills = [
   {
     name: "JavaScript",
-    icon: <BiLogoJavascript />,
+    icon: js,
     descricao: "Desenvolvimento de aplicações web interativas e dinâmicas.",
     level: "90%",
   },
   {
     name: "React",
-    icon: <BiLogoReact />,
+    icon: react,
     descricao: "Criação de interfaces de usuário modernas e reativas.",
     level: "85%",
   },
   {
     name: "TypeScript",
-    icon: <BiLogoTypescript />,
+    icon: ts,
     descricao: "Desenvolvimento seguro e escalável com tipagem estática.",
     level: "80%",
   },
@@ -35,31 +35,31 @@ const skills = [
   },
   {
     name: "PostgreSQL",
-    icon: <BiLogoPostgresql />,
+    icon: pg,
     descricao: "Gerenciamento de bancos de dados relacionais robustos.",
     level: "70%",
   },
   {
     name: "HTML",
-    icon: <BiLogoHtml5 />,
+    icon: html,
     descricao: "Estruturação semântica e acessível de páginas web.",
     level: "95%",
   },
   {
     name: "Tailwind CSS",
-    icon: <BiLogoTailwindCss />,
+    icon: tailwind,
     descricao: "Estilização rápida e responsiva com utilitários CSS.",
     level: "85%",
   },
   {
     name: "Figma",
-    icon: <BiLogoFigma />,
+    icon: figma,
     descricao: "Design de interfaces e prototipagem colaborativa.",
     level: "80%",
   },
   {
     name: "Git",
-    icon: <SiGit />,
+    icon: git,
     descricao: "Controle de versão e colaboração em projetos de software.",
     level: "90%",
   },

@@ -8,7 +8,7 @@ const MainEstilizado = styled.main`
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 50px;
   height: 1000px;
 `;
 

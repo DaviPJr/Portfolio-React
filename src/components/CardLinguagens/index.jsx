@@ -16,7 +16,7 @@ const Card = styled.div`
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  gap: -20px;
+  gap: 10px;
   transition: background 0.1s ease-in-out;
   &:hover {
     background: rgba(209, 213, 219, 0.2);
@@ -38,9 +38,9 @@ const CardTitulo = styled.p`
   font-weight: 500;
 `;
 
-const IconeEstilizado = styled.div`
+const IconeEstilizado = styled.img`
   color: #60a5fa;
-  font-size: 50px;
+  height: 40px;
 `;
 
 const CardInfoContainer = styled.div`
@@ -76,7 +76,7 @@ const CardLinguagens = () => {
       {skills.map((skill, index) => (
         <Card key={index}>
           <CardTituloContainer>
-            <IconeEstilizado>{skill.icon}</IconeEstilizado>
+            <IconeEstilizado src={skill.icon} />
             <CardTitulo>{skill.name}</CardTitulo>
           </CardTituloContainer>
           <CardInfoContainer>
