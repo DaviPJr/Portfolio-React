@@ -1,7 +1,7 @@
 import { BiLogoJavascript } from "react-icons/bi";
 import { BiLogoReact } from "react-icons/bi";
 import { BiLogoTypescript } from "react-icons/bi";
-import { BiLogoNodejs } from "react-icons/bi";
+import node from "./assets/image.png";
 import { BiLogoPostgresql } from "react-icons/bi";
 import { BiLogoHtml5 } from "react-icons/bi";
 import { BiLogoTailwindCss } from "react-icons/bi";
@@ -29,7 +29,7 @@ const skills = [
   },
   {
     name: "Node.js",
-    icon: <BiLogoNodejs />,
+    icon: node,
     descricao: "Construção de APIs e aplicações backend eficientes.",
     level: "75%",
   },
