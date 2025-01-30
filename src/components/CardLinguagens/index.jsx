@@ -12,6 +12,20 @@ const CardContainer = styled.div`
   height: 600px;
 `;
 
+const Card = styled(motion.div)`
+  width: 100%;
+  background: rgba(209, 213, 219, 0.15);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  transition: background 0.1s ease-in-out;
+
+  &:hover {
+    background: rgba(209, 213, 219, 0.2);
+  }
+`;
+
 const CardTituloContainer = styled.div`
   display: flex;
   align-items: center;
@@ -56,24 +70,17 @@ const CardLinguagens = () => {
   return (
     <CardContainer>
       {skills.map((skill, index) => (
-        <motion.div
+        <Card
           key={index}
-          style={{
-            width: "100%",
-            background: "rgba(209, 213, 219, 0.15)",
-            borderRadius: "10px",
-            display: "flex",
-            flexDirection: "column",
-            gap: "10px",
-          }}
-          whileHover={{ background: "rgba(209, 213, 219, 0.2)" }}
           initial={{
             opacity: 0,
             x: -100,
+            y: 0,
           }}
           animate={{
             opacity: 1,
             x: 0,
+            y: [10, 0],
           }}
           transition={{
             duration: 0.5,
@@ -107,7 +114,7 @@ const CardLinguagens = () => {
               ></motion.div>
             </SkillBar>
           </CardInfoContainer>
-        </motion.div>
+        </Card>
       ))}
     </CardContainer>
   );
