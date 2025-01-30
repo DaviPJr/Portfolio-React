@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import foto from "../assets/ft.jpeg";
 
@@ -7,26 +8,6 @@ const Main = styled.main`
   align-items: center;
   justify-content: space-between;
   height: 990px;
-`;
-
-const MainTextoContainer = styled.div`
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-`;
-
-const FotoContainer = styled.div`
-  width: 450px;
-  height: 450px;
-  border-radius: 50%;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 5px solid #60a5fa;
-  box-shadow: 0px 4px 20px rgba(96, 165, 250, 0.5);
-  margin-right: 100px;
 `;
 
 const TituloEstilizado = styled.h1`
@@ -49,17 +30,58 @@ const ParagrafoEstilizado = styled.p`
 const Inicio = () => {
   return (
     <Main>
-      <MainTextoContainer>
+      <motion.div
+        style={{
+          margin: 0,
+          display: "flex",
+          flexDirection: "column",
+          gap: "20px",
+        }}
+        initial={{
+          x: -100,
+          opacity: 0,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+        }}
+        transition={{
+          ease: "backInOut",
+        }}
+      >
         <TituloEstilizado>Davi Pereira</TituloEstilizado>
         <SubtituloEstilizado>Full Stack Developer</SubtituloEstilizado>
         <ParagrafoEstilizado>
           Bem-vindo ao meu portfólio! Explore meus projetos e conheça mais sobre
           mim.
         </ParagrafoEstilizado>
-      </MainTextoContainer>
-      <FotoContainer>
+      </motion.div>
+      <motion.div
+        style={{
+          width: "450px",
+          height: "450px",
+          borderRadius: "50%",
+          overflow: "hidden",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          border: "5px solid #60a5fa",
+          boxShadow: "0px 4px 20px rgba(96, 165, 250, 0.5)",
+          marginRight: "100px",
+        }}
+        initial={{
+          scale: 0,
+        }}
+        animate={{
+          scale: 1,
+        }}
+        transition={{
+          duration: 1,
+          ease: "backInOut",
+        }}
+      >
         <img src={foto} alt="Foto de Davi Pereira" />
-      </FotoContainer>
+      </motion.div>
     </Main>
   );
 };

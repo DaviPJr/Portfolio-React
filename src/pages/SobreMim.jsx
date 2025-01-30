@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
 
 import foto from "../assets/ft2.jpeg";
 
@@ -10,13 +11,6 @@ const MainEstilizado = styled.main`
   justify-content: center;
   height: 1000px;
   gap: 100px;
-`;
-
-const InfosContainer = styled.div`
-  display: flex;
-  gap: 10px;
-  flex-direction: column;
-  width: 35%;
 `;
 
 const ParagrafoEstilizado = styled.p`
@@ -32,10 +26,34 @@ const FotoEstilizada = styled.img`
 const SobreMim = () => {
   return (
     <MainEstilizado>
-      <div>
+      <motion.div
+        initial={{
+          x: -100,
+          opacity: 0,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+        }}
+      >
         <FotoEstilizada src={foto} alt="Foto de Davi Pereira" />
-      </div>
-      <InfosContainer>
+      </motion.div>
+      <motion.div
+        style={{
+          display: "flex",
+          gap: "10px",
+          flexDirection: "column",
+          width: "35%",
+        }}
+        initial={{
+          x: 100,
+          opacity: 0,
+        }}
+        animate={{
+          x: 0,
+          opacity: 1,
+        }}
+      >
         <Titulo>Davi Pereira</Titulo>
         <ParagrafoEstilizado>
           Cursando Análise e Desenvolvimento de Sistemas.
@@ -60,7 +78,7 @@ const SobreMim = () => {
           inovadores, onde eu possa aplicar meus conhecimentos e continuar
           evoluindo como profissional.
         </ParagrafoEstilizado>
-      </InfosContainer>
+      </motion.div>
     </MainEstilizado>
   );
 };
