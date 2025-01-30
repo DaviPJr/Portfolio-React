@@ -1,4 +1,6 @@
 import styled from "styled-components";
+import { motion } from "framer-motion";
+
 import skills from "../../skillsData.jsx";
 
 const CardContainer = styled.div`
@@ -8,19 +10,6 @@ const CardContainer = styled.div`
   grid-template-rows: 1fr 1fr 1fr;
   gap: 40px;
   height: 600px;
-`;
-
-const Card = styled.div`
-  width: 100%;
-  background: rgba(209, 213, 219, 0.15);
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  transition: background 0.1s ease-in-out;
-  &:hover {
-    background: rgba(209, 213, 219, 0.2);
-  }
 `;
 
 const CardTituloContainer = styled.div`
@@ -74,7 +63,30 @@ const CardLinguagens = () => {
   return (
     <CardContainer>
       {skills.map((skill, index) => (
-        <Card key={index}>
+        <motion.div
+          key={index}
+          style={{
+            width: "100%",
+            background: "rgba(209, 213, 219, 0.15)",
+            borderRadius: "10px",
+            display: "flex",
+            flexDirection: "column",
+            gap: "10px",
+          }}
+          whileHover={{ background: "rgba(209, 213, 219, 0.2)" }}
+          initial={{
+            opacity: 0,
+            x: -100,
+          }}
+          animate={{
+            opacity: 1,
+            x: 0,
+          }}
+          transition={{
+            duration: 0.5,
+            delay: index * 0.2,
+          }}
+        >
           <CardTituloContainer>
             <IconeEstilizado src={skill.icon} />
             <CardTitulo>{skill.name}</CardTitulo>
@@ -90,7 +102,7 @@ const CardLinguagens = () => {
               ></SkillLevel>
             </SkillBar>
           </CardInfoContainer>
-        </Card>
+        </motion.div>
       ))}
     </CardContainer>
   );
