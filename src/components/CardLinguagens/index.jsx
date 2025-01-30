@@ -52,13 +52,6 @@ const SkillBar = styled.div`
   overflow: hidden;
 `;
 
-const SkillLevel = styled.div`
-  height: 100%;
-  background-color: #3b82f6;
-  border-radius: 5px;
-  transition: width 0.5s ease;
-`;
-
 const CardLinguagens = () => {
   return (
     <CardContainer>
@@ -94,12 +87,24 @@ const CardLinguagens = () => {
           <CardInfoContainer>
             <CardInfo>{skill.descricao}</CardInfo>
             <SkillBar>
-              <SkillLevel
+              <motion.div
                 style={{
                   width: skill.level,
                   height: "10px",
+                  backgroundColor: "#3b82f6",
+                  borderRadius: "5px",
                 }}
-              ></SkillLevel>
+                initial={{
+                  width: 50,
+                }}
+                animate={{
+                  width: skill.level,
+                }}
+                transition={{
+                  duration: 0.5,
+                  delay: index * 0.3,
+                }}
+              ></motion.div>
             </SkillBar>
           </CardInfoContainer>
         </motion.div>
