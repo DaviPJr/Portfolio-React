@@ -22,6 +22,9 @@ const HeaderConteudo = styled.div`
   width: 1440px;
   margin: 0 auto;
   max-width: 100%;
+  @media (min-width: 768px) and (max-width: 1440px) {
+    width: 95%;
+  }
 `;
 
 const HeaderLinks = styled.div`

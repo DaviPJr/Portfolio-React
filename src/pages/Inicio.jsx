@@ -7,7 +7,7 @@ const Main = styled.main`
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 990px;
+  height: auto;
 `;
 
 const TituloEstilizado = styled.h1`
@@ -25,6 +25,24 @@ const SubtituloEstilizado = styled.h4`
 
 const ParagrafoEstilizado = styled.p`
   color: #f3f4f6;
+`;
+
+const FotoContainer = styled(motion.div)`
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 5px solid #60a5fa;
+  box-shadow: 0px 4px 20px rgba(96, 165, 250, 0.5);
+  margin-right: 100px;
+
+  @media (min-width: 768px) and (max-width: 1440px) {
+    width: 350px;
+    height: 350px;
+  }
 `;
 
 const Inicio = () => {
@@ -56,19 +74,7 @@ const Inicio = () => {
           mim.
         </ParagrafoEstilizado>
       </motion.div>
-      <motion.div
-        style={{
-          width: "450px",
-          height: "450px",
-          borderRadius: "50%",
-          overflow: "hidden",
-          display: "flex",
-          justifyContent: "center",
-          alignItems: "center",
-          border: "5px solid #60a5fa",
-          boxShadow: "0px 4px 20px rgba(96, 165, 250, 0.5)",
-          marginRight: "100px",
-        }}
+      <FotoContainer
         initial={{
           scale: 0,
         }}
@@ -81,7 +87,7 @@ const Inicio = () => {
         }}
       >
         <img src={foto} alt="Foto de Davi Pereira" />
-      </motion.div>
+      </FotoContainer>
     </Main>
   );
 };

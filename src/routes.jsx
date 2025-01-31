@@ -28,6 +28,11 @@ const AppContainer = styled.div`
   max-width: 100%;
   position: relative;
   z-index: 1;
+
+  @media (min-width: 768px) and (max-width: 1440px) {
+    width: 95%;
+    margin-top: 120px;
+  }
 `;
 
 const AppRoutes = () => {
