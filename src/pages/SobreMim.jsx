@@ -9,7 +9,7 @@ const MainEstilizado = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 1000px;
+  height: auto;
   gap: 100px;
 `;
 

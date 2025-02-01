@@ -8,6 +8,9 @@ const Main = styled.main`
   align-items: center;
   justify-content: space-between;
   height: auto;
+  @media (min-width: 768px) and (max-width: 1440px) {
+    margin-top: 120px;
+  }
 `;
 
 const TituloEstilizado = styled.h1`

@@ -10,6 +10,9 @@ const CardContainer = styled.div`
   grid-template-rows: 1fr 1fr 1fr;
   gap: 40px;
   height: 600px;
+  @media (min-width: 768px) and (max-width: 1440px) {
+    height: 500px;
+  }
 `;
 
 const Card = styled(motion.div)`
@@ -39,11 +42,17 @@ const CardTitulo = styled.p`
   color: #ffffff;
   font-size: 22px;
   font-weight: 500;
+  @media (min-width: 768px) and (max-width: 1440px) {
+    font-size: 18px;
+  }
 `;
 
 const IconeEstilizado = styled.img`
   color: #60a5fa;
   height: 40px;
+  @media (min-width: 768px) and (max-width: 1440px) {
+    height: 25px;
+  }
 `;
 
 const CardInfoContainer = styled.div`
@@ -56,6 +65,9 @@ const CardInfoContainer = styled.div`
 
 const CardInfo = styled.p`
   color: #d1d5db;
+  @media (min-width: 768px) and (max-width: 1440px) {
+    font-size: 14px;
+  }
 `;
 
 const SkillBar = styled.div`

@@ -31,7 +31,6 @@ const AppContainer = styled.div`
 
   @media (min-width: 768px) and (max-width: 1440px) {
     width: 95%;
-    margin-top: 120px;
   }
 `;
 

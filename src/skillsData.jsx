@@ -60,7 +60,7 @@ const skills = [
   {
     name: "Git",
     icon: git,
-    descricao: "Controle de versão e colaboração em projetos de software.",
+    descricao: "Controle de versão efetiva e colaboração no desenvolvimento",
     level: "90%",
   },
 ];
