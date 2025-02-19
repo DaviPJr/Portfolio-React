@@ -17,7 +17,7 @@ const Card = styled.div`
   background: rgba(209, 213, 219, 0.15);
   display: flex;
   flex-direction: column;
-  gap: 15px;
+  gap: 10px;
   width: 100%;
 `;
 
@@ -33,14 +33,14 @@ const ImgEstilizada = styled.img`
 const CardDiv = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
 `;
 
 const CardContent = styled.div`
   padding: 10px;
   display: flex;
   flex-direction: column;
-  gap: 14px;
+  gap: 10px;
 `;
 
 const TituloEstilizado = styled.h2`

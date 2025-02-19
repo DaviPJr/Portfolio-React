@@ -8,9 +8,7 @@ const Main = styled.main`
   align-items: center;
   justify-content: space-between;
   height: auto;
-  @media (min-width: 768px) and (max-width: 1440px) {
-    margin-top: 120px;
-  }
+  height: calc(100vh - 220px);
 `;
 
 const TituloEstilizado = styled.h1`
@@ -41,11 +39,6 @@ const FotoContainer = styled(motion.div)`
   border: 5px solid #60a5fa;
   box-shadow: 0px 4px 20px rgba(96, 165, 250, 0.5);
   margin-right: 100px;
-
-  @media (min-width: 768px) and (max-width: 1440px) {
-    width: 350px;
-    height: 350px;
-  }
 `;
 
 const Inicio = () => {

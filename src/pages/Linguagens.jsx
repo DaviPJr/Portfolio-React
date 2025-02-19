@@ -9,11 +9,7 @@ const MainEstilizado = styled.main`
   align-items: center;
   justify-content: center;
   gap: 50px;
-  height: auto;
-  @media (min-width: 768px) and (max-width: 1440px) {
-    margin-top: 13px;
-    gap: 20px;
-  }
+  height: calc(100vh - 270px);
 `;
 
 const Linguagens = () => {
