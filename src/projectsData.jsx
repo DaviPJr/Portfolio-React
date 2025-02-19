@@ -21,7 +21,8 @@ const projects = [
   {
     id: 3,
     title: "Hydra Landing Page",
-    description: "Landing Page responsiva com design chamativo e atraente",
+    description:
+      "Landing Page responsiva com design chamativo e atraente sobre um produto fictício",
     img: hydra,
   },
   {

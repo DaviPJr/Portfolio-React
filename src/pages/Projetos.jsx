@@ -9,6 +9,8 @@ const MainEstilizado = styled.main`
   align-items: center;
   justify-content: center;
   height: auto;
+  gap: 15px;
+  margin-top: 15px;
 `;
 
 const Projetos = () => {
