@@ -36,7 +36,7 @@ const FooterIcones = styled.div`
 
 const Icone = styled.div`
   font-size: 27px;
-  color: rgba(0, 0, 0, 0.7);
+  color: #9ca3af;
   transition: color 0.3s ease, transform 0.3s ease;
   cursor: pointer;
   &:hover {
