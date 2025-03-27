@@ -8,6 +8,8 @@ import Footer from "./components/Footer";
 import ParticlesComponent from "./components/Particles";
 import Linguagens from "./pages/Linguagens";
 import Projetos from "./pages/Projetos";
+import Certificados from "./pages/Certificados";
+import Contato from "./pages/Contato";
 
 const FundoColorido = styled.div`
   background: rgb(1, 3, 64);
@@ -44,6 +46,8 @@ const AppRoutes = () => {
             <Route path="/sobre-mim" element={<SobreMim />} />
             <Route path="/linguagens" element={<Linguagens />} />
             <Route path="/projetos" element={<Projetos />} />
+            <Route path="/certificados" element={<Certificados />} />
+            <Route path="/contato" element={<Contato />} />
           </Routes>
         </AppContainer>
         <Footer />
