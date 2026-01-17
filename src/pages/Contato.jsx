@@ -15,6 +15,8 @@ const Main = styled.main`
   @media (max-width: 600px) {
     min-height: auto;
     align-items: flex-start;
+    justify-content: center;
+    padding: 32px 32px;
   }
 `;
 
@@ -22,6 +24,7 @@ const Card = styled(motion.section)`
   width: 72%;               
   max-width: 820px;         
   background: rgba(209, 213, 219, 0.12);
+   min-width: 0;
   border-radius: 12px;
   padding: 24px;            
   display: grid;
@@ -36,8 +39,10 @@ const Card = styled(motion.section)`
   }
 
   @media (max-width: 600px) {
-    padding: 16px;      /* menos “gordo” */
+    padding: 18px;      
     gap: 16px;
+    align-items: center;
+    justify-items: center;
   }
 `;
 
@@ -49,15 +54,28 @@ const Title = styled.h2`
 const Subtitle = styled.p`
   color: #d1d5db;
   margin-bottom: 18px;
+
+  @media (max-width: 600px) {
+    width: 100%;
+    align-self: center;
+  }
 `;
 
 const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 14px;
+  width: 100%;
+
+  @media (max-width: 600px) {
+    align-items: center;
+  }
 `;
 
 const Field = styled.input`
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 12px 14px;
   border-radius: 8px;
   border: 1px solid rgba(209, 213, 219, 0.25);
@@ -67,9 +85,16 @@ const Field = styled.input`
   &::placeholder {
     color: #9ca3af;
   }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
 
 const TextArea = styled.textarea`
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
   padding: 12px 14px;
   border-radius: 8px;
   border: 1px solid rgba(209, 213, 219, 0.25);
@@ -81,7 +106,12 @@ const TextArea = styled.textarea`
   &::placeholder {
     color: #9ca3af;
   }
+
+  @media (max-width: 600px) {
+    width: 100%;
+  }
 `;
+
 
 const Button = styled.button`
   background: #3b82f6;
@@ -96,12 +126,20 @@ const Button = styled.button`
     transform: translateY(-1px);
     box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4);
   }
+
+   @media (max-width: 600px) {
+    align-self: center;
+  }
 `;
 
 const Side = styled.div`
   display: flex;
   flex-direction: column;
   gap: 14px;
+
+  @media (max-width: 600px) {
+    width: 90%;
+  }
 `;
 
 const ContactItem = styled.a`
@@ -118,7 +156,23 @@ const ContactItem = styled.a`
     background: rgba(209, 213, 219, 0.16);
     transform: translateX(2px);
   }
+
+  @media (max-width: 600px) {
+    font-size: 12px;
+  }
 `;
+
+const FormWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @media (max-width: 600px) {
+    align-items: center;
+    text-align: center;
+  }
+`;
+
 
 const StatusMsg = styled.p`
   color: ${(p) => (p.success ? "#4ade80" : "#f87171")};
@@ -156,7 +210,7 @@ const [status, setStatus] = useState("idle");
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
-        <div>
+        <FormWrapper>
           <Title>Vamos conversar</Title>
           <Subtitle>Envie uma mensagem e retornarei em breve.</Subtitle>
           <Form onSubmit={handleSubmit}>
@@ -174,7 +228,7 @@ const [status, setStatus] = useState("idle");
               <StatusMsg>Ops, tente novamente mais tarde.</StatusMsg>
             )}
           </Form>
-        </div>
+        </FormWrapper>
 
         <Side>
           <Subtitle>Ou fale direto por aqui:</Subtitle>
