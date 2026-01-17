@@ -10,6 +10,12 @@ const Main = styled.main`
   display: flex;
   align-items: center;
   justify-content: center;
+
+  /* Melhor no mobile: evita bug do 100vh no navegador */
+  @media (max-width: 600px) {
+    min-height: auto;
+    align-items: flex-start;
+  }
 `;
 
 const Card = styled(motion.section)`
@@ -25,8 +31,13 @@ const Card = styled(motion.section)`
 
   @media (max-width: 900px) {
     grid-template-columns: 1fr;
-    width: 90%;
+    width: 100%;
     max-width: 560px;
+  }
+
+  @media (max-width: 600px) {
+    padding: 16px;      /* menos “gordo” */
+    gap: 16px;
   }
 `;
 
