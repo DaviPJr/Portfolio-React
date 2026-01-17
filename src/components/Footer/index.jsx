@@ -11,12 +11,13 @@ const FooterEstilizado = styled.footer`
     rgba(5, 0, 60, 0.4) 100%
   );
   height: 130px;
-  position: fixed;
-  bottom: 0;
   width: 100%;
   display: flex;
   align-items: center;
+  position: relative;
+  z-index: 10;
 `;
+
 
 const FooterConteudo = styled.div`
   display: flex;
@@ -34,7 +35,7 @@ const FooterIcones = styled.div`
   gap: 20px;
 `;
 
-const Icone = styled.div`
+const Icone = styled.a`
   font-size: 27px;
   color: #9ca3af;
   transition: color 0.3s ease, transform 0.3s ease;
@@ -53,20 +54,38 @@ const Footer = () => {
     <FooterEstilizado>
       <FooterConteudo>
         <FooterIcones>
-          <Icone>
+          <Icone
+            href="https://github.com/DaviPJr"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="GitHub"
+          >
             <FiGithub />
           </Icone>
-          <Icone>
+          <Icone
+            href="https://www.linkedin.com/in/davi-pereira-913034277/"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="LinkedIn"
+          >
             <FiLinkedin />
           </Icone>
-          <Icone>
+           <Icone
+            href="mailto:david.p.junior@hotmail.com"
+            aria-label="Email"
+          >
             <MdOutlineEmail />
           </Icone>
-          <Icone>
+          <Icone
+            href="https://www.instagram.com/_daveds"
+            target="_blank"
+            rel="noreferrer"
+            aria-label="Instagram"
+          >
             <FiInstagram />
           </Icone>
         </FooterIcones>
-        <FooterRights>© 2025 Davi Pereira. All rights reserved.</FooterRights>
+        <FooterRights>© 2026 Davi Pereira. All rights reserved.</FooterRights>
       </FooterConteudo>
     </FooterEstilizado>
   );

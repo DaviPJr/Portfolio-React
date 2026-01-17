@@ -32,6 +32,14 @@ const AppContainer = styled.div`
   max-width: 100%;
   position: relative;
   z-index: 1;
+  flex: 1;
+  overflow-y: auto;
+  padding: 30px 0;
+  padding-bottom: 30px; 
+
+  @media (max-width: 768px) {
+    padding: 16px 0 40px;
+  }
 `;
 
 const AppRoutes = () => {

@@ -6,8 +6,9 @@ const HeaderEstilizado = styled.header`
   z-index: 1;
   display: flex;
   align-items: center;
-  justify-content: space-between;
-  height: 65px;
+  justify-content: center;
+  min-height: 65px;
+  padding: 10px 0;
   background: linear-gradient(
     146deg,
     rgba(0, 0, 30, 0.4) 0%,
@@ -19,32 +20,44 @@ const HeaderConteudo = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
   width: 1440px;
-  margin: 0 auto;
   max-width: 100%;
-  @media (min-width: 768px) and (max-width: 1440px) {
-    width: 95%;
-  }
+  padding: 0 16px;
+  margin: 0 auto;
 `;
 
 const HeaderLinks = styled.div`
   display: flex;
-  gap: 23px;
+  flex-wrap: wrap;
+  gap: 14px;
+
+  @media (max-width: 768px) {
+    gap: 10px;
+    font-size: 14px;
+  }
 `;
 
 const TituloEstilizado = styled.p`
   color: #ffffff;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 500;
+
+  @media (max-width: 768px) {
+    font-size: 18px;
+  }
 `;
 
 const LinksEsilizados = styled(Link)`
   color: #d1d5db;
+  transition: color 0.2s ease;
 
   &:hover {
     color: #ffffff;
   }
 `;
+
 
 const Header = () => {
   return (

@@ -4,14 +4,22 @@ import { motion } from "framer-motion";
 import skills from "../../skillsData.jsx";
 
 const CardContainer = styled.div`
-  width: 80%;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 40px;
-  height: 600px;
-  @media (min-width: 768px) and (max-width: 1440px) {
-    height: 500px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  @media (max-width: 600px) {
+    width: 92%;
+    grid-template-columns: 1fr; /* 1 card por linha */
+    gap: 16px;
   }
 `;
 
@@ -27,7 +35,12 @@ const Card = styled(motion.div)`
   &:hover {
     background: rgba(209, 213, 219, 0.2);
   }
+
+  @media (max-width: 600px) {
+    scroll-snap-align: start;
+  }
 `;
+
 
 const CardTituloContainer = styled.div`
   display: flex;

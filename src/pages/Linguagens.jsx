@@ -7,10 +7,10 @@ const MainEstilizado = styled.main`
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 50px;
-  height: calc(100vh - 270px);
+  justify-content: center; 
+  width: 100%;
 `;
+
 
 const Linguagens = () => {
   return (

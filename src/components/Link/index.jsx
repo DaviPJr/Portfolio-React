@@ -5,27 +5,28 @@ import { GoShareAndroid } from "react-icons/go";
 
 const LinkContainer = styled.div`
   display: flex;
-  gap: 20px;
+  gap: 12px;
+  flex-wrap: wrap;
+  align-items: center;
 `;
 
 const LinkEstilizado = styled.a`
   color: #d1d5db;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
 `;
 
-const Link = () => {
-  return (
-    <LinkContainer>
-      <div style={{ display: "flex", gap: "5px", alignItems: "center" }}>
-        <PiGithubLogo color="#d1d5db" size={25} />
-        <LinkEstilizado href="">Código</LinkEstilizado>
-      </div>
+const Link = () => (
+  <LinkContainer>
+    <LinkEstilizado href="">
+      <PiGithubLogo color="#d1d5db" size={22} /> Código
+    </LinkEstilizado>
+    <LinkEstilizado href="">
+      <GoShareAndroid color="#d1d5db" size={22} /> Demo
+    </LinkEstilizado>
+  </LinkContainer>
+);
 
-      <div style={{ display: "flex", gap: "5px", alignItems: "center" }}>
-        <GoShareAndroid color="#d1d5db" size={25} />
-        <LinkEstilizado href="">Demo</LinkEstilizado>
-      </div>
-    </LinkContainer>
-  );
-};
 
 export default Link;

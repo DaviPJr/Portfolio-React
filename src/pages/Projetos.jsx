@@ -10,7 +10,6 @@ const MainEstilizado = styled.main`
   justify-content: center;
   height: auto;
   gap: 15px;
-  margin-top: 15px;
 `;
 
 const Projetos = () => {
