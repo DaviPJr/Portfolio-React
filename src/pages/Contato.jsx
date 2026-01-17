@@ -55,9 +55,12 @@ const Subtitle = styled.p`
   color: #d1d5db;
   margin-bottom: 18px;
 
-  @media (max-width: 600px) {
-    width: 100%;
-    align-self: center;
+   @media (max-width: 600px) {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 26ch; 
+    line-height: 1.4;
   }
 `;
 
